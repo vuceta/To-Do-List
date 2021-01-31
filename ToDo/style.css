@@ -10,7 +10,9 @@ body {
     margin-top: 40px;
     background: white;
     border-radius: 5px;
-
+    justify-content: center;
+    align-items: center;
+  
 }
 
 input { 
@@ -58,6 +60,3 @@ ul {
     margin: 0;
     padding: 0;
   }  
-
-
-/*  */  
