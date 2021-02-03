@@ -27,7 +27,7 @@ $(function() {
     return false;
   });
   let indexTask;
-  $(document).on('dblclick', 'li', function() {
+  $(document).on('click', 'li', function() {
     listState = 'edit';
     indexTask = $(this).index()
     $('.input').val($(this).text().trim());
