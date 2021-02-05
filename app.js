@@ -1,7 +1,7 @@
 // add button and remove
 $(function() {
   let listState = 'add';
-  $('.add').on('click', function() {
+  $('#btn').on('click', function() {
     if (listState === 'add') {
       let list = $('.input').val();
       if (list !== '') {
@@ -15,14 +15,12 @@ $(function() {
         });
       }
     } else if (listState === 'edit') {
-      $('.add').on('click', function() {
         listState = 'add';
         if ($(this).text() == 'Save') {
           $("li:eq(" + indexTask + ")").html("<span><i class='fa fa-trash-o'> </i></span>" + $('.input').val())
-          $('.add').html('Add');
+          $('#btn').html('Add');
           $('.input').val('')
         }
-      })
     };
     return false;
   });
@@ -31,6 +29,6 @@ $(function() {
     listState = 'edit';
     indexTask = $(this).index()
     $('.input').val($(this).text().trim());
-    $('.add').html('Save')
+    $('#btn').html('Save')
   });
 });
